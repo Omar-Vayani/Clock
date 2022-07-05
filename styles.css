@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 body {
   height: 100vh;
@@ -11,18 +12,58 @@ body {
 }
 
 .frame {
-  width: 80vw;
-  height: 80vw;
+  width: 50vw;
+  height: 50vw;
+  margin: 5vh;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #fff;
   display: grid;
   place-items: center;
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.2);
+  border: 1vw solid black;
+  position: relative;
 }
 
-.tick {
-  width: 10px;
+.min-tick,
+.hr-tick,
+.sec-tick {
+  width: 0.3vw;
   height: 40%;
-  background-color: black;
-  transform-origin: bottom;
-  transform: translateY(-40%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%);
+  background-color: royalblue;
+}
+.hr-tick {
+  height: 30%;
+  background: #000;
+}
+.sec-tick {
+  height: 45%;
+  background: grey;
+}
+
+.circle {
+  width: 2.5%;
+  height: 2.5%;
+  background-color: #000;
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+}
+.display {
+  width: 60%;
+  height: 10vh;
+  margin-bottom: 5vh;
+  background-color: royalblue;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  text-align: center;
+  place-items: center;
+  letter-spacing: 1vw;
+  font-size: 4vh;
+  font-weight: 700;
+  color: white;
 }
